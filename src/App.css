@@ -3,3 +3,11 @@
   height: 50px;
   padding: 0 !important;
 }
+
+a {
+  text-decoration: none;
+  color: black;
+}
+.active {
+  color: red;
+}
