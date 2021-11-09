@@ -4,7 +4,7 @@ import MissionsContainer from './components/MissionsContainer';
 function App() {
   return (
     <div className="App">
-     <MissionsContainer />
+      <MissionsContainer />
     </div>
   );
 }
