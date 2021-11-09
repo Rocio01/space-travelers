@@ -1,12 +1,14 @@
 import axios from 'axios';
 const SET_MISSIONS = 'space-travelers/missions/SET_MISSIONS';
 const URL = 'https://api.spacexdata.com/v3/missions';
-const initialState = [];
+const initialState = {
+  missions: [],
+};
 
 const missionsReducer = (state = initialState, action) => {
   switch(action.type){
     case SET_MISSIONS:
-      return [...state, action.payload];
+      return {...state, missions: action.payload};
     default:
       return state;
   }
