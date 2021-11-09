@@ -17,7 +17,7 @@ const Header = () => (
         <Link to="/missions">
           <span className="missions-nav mx-3">Missions</span>
         </Link>
-        <Link to="/profile">
+        <Link to="/Profile">
           <span className="profile-nav mx-3">Profile</span>
         </Link>
       </div>
