@@ -2,6 +2,7 @@ import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
 import Profile from './components/Profile';
+import MissionsContainer from './components/MissionsContainer';
 
 function App() {
   return (
@@ -10,9 +11,9 @@ function App() {
         <Header />
         <Routes>
           <Route path="/Profile" element={<Profile />} />
+          <Route path="/missions" element={<MissionsContainer />} />
         </Routes>
       </Router>
-
     </div>
   );
 }
