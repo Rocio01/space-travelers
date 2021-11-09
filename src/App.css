@@ -8,6 +8,12 @@ a {
   text-decoration: none;
   color: black;
 }
+
 .active {
   color: red;
+}
+
+.rockets-images {
+  width: 246px;
+  height: 171px;
 }
