@@ -5,12 +5,11 @@ import React from 'react';
 const Mission = (props) => {
 
   const  {
-    mission_id, mission_name, description, status = false,
+    mission_id, mission_name, description, status,
   } = props;
 
   return (
-    <tr>
-      <td>{mission_id}</td>
+    <tr key={mission_id}>
       <td>{mission_name}</td>
       <td>{description}</td>
       <td>{status}</td>
