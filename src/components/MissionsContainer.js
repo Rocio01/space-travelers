@@ -10,17 +10,17 @@ const MissionsContainer = () => {
     fetchMissions(dispatch);
   }, []);
 
-  const missionsStore = useSelector((store) => Object.values(store.missionsReducer.missions));
+  const missionsStore = useSelector((store) => store.missionsReducer.missions);
 
   return (
-    <div>
+    <div className="container mt-5">
       <table className="table table-bordered">
         <thead>
           <tr>
-            <th> id </th>
-            <th>mission</th>
+            <th className="col-1">mission</th>
             <th>Description</th>
-            <th>Status</th>
+            <th className="col-2">Status</th>
+            <th className="col-2"> </th>
           </tr>
         </thead>
         <tbody>
