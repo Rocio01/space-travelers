@@ -6,21 +6,23 @@ import { fetchMissions } from '../redux/missions/missions';
 const MissionsContainer = () => {
   const dispatch = useDispatch();
 
+  const missionsStore = useSelector((store) => store.missionsReducer.missions);
+
   useEffect(() => {
-    fetchMissions(dispatch);
+    if (!missionsStore.length) {
+      fetchMissions(dispatch);
+    }
   }, []);
 
-  const missionsStore = useSelector((store) => Object.values(store.missionsReducer.missions));
-
   return (
-    <div>
-      <table className="table table-bordered">
+    <div className="container mt-5">
+      <table className="table table-bordered table-striped">
         <thead>
           <tr>
-            <th> id </th>
-            <th>mission</th>
+            <th className="col-1">mission</th>
             <th>Description</th>
-            <th>Status</th>
+            <th className="col-2">Status</th>
+            <th className="col-2"> </th>
           </tr>
         </thead>
         <tbody>
