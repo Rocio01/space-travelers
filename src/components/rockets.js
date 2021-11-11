@@ -26,10 +26,12 @@ const Rockets = (props) => {
       </div>
       <div className="col-9">
         <h5>{rocket_name}</h5>
-        <span className={reserved === true ? 'btn btn-primary' : 'btn'}>
-          { reserved === true ? 'Reserved' : ''}
-        </span>
-        <p>{description}</p>
+        <p>
+          <span className={reserved === true ? 'btn btn-primary btn-sm' : 'btn'}>
+            { reserved === true ? 'Reserved' : ''}
+          </span>
+          {description}
+        </p>
         <button type="button" className={reserved === true ? 'btn btn-dark' : 'btn btn-primary'} onClick={reserved === true ? cancelReservetion : newReservetion}>{reserved === true ? 'Cancel Booking' : 'reserved rocket'}</button>
       </div>
 
