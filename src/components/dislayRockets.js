@@ -13,7 +13,6 @@ const DisplayRockets = () => {
       fetchRockets(dispatch);
     }
   }, []);
-  console.log(rocketsStore);
 
   return (
     <div className="container">

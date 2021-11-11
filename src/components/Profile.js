@@ -1,5 +1,6 @@
 import React from 'react';
 import ProfileMisions from './ProfileMisions';
+import RocketsProfile from './rocketsProfile';
 
 function Profile() {
   return (
@@ -10,6 +11,7 @@ function Profile() {
       </div>
       <div className="rockets-div col-5 m-1 p-3">
         <h2> My Rockets </h2>
+        <RocketsProfile />
       </div>
     </div>
   );
