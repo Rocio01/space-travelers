@@ -13,7 +13,6 @@ const Rockets = (props) => {
 
   const newReservetion = () => {
     dispatch(setReserved(id));
-    console.log(reserved);
   };
 
   const cancelReservetion = () => {
