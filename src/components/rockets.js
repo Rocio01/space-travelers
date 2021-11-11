@@ -27,7 +27,7 @@ const Rockets = (props) => {
       <div className="col-9">
         <h5>{rocket_name}</h5>
         <p>
-          <span className={reserved === true ? 'btn btn-primary btn-sm' : 'btn'}>
+          <span className={reserved === true ? 'btn btn-primary btn-sm' : 'button-reserverd'}>
             { reserved === true ? 'Reserved' : ''}
           </span>
           {description}
