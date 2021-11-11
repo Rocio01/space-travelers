@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches RocketsProfile component snapshot 1`] = `
+<ul
+  className="list-group"
+/>
+`;

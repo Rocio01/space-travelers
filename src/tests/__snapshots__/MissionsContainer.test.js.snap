@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches MissionsContainer component snapshot 1`] = `
+<div
+  className="container mt-5"
+>
+  <table
+    className="table table-bordered table-striped"
+  >
+    <thead>
+      <tr>
+        <th
+          className="col-1"
+        >
+          mission
+        </th>
+        <th>
+          Description
+        </th>
+        <th
+          className="col-2"
+        >
+          Status
+        </th>
+        <th
+          className="col-2"
+        >
+           
+        </th>
+      </tr>
+    </thead>
+    <tbody />
+  </table>
+</div>
+`;
+
+exports[`matches calculator snapshot 1`] = `
+<div
+  className="container mt-5"
+>
+  <table
+    className="table table-bordered table-striped"
+  >
+    <thead>
+      <tr>
+        <th
+          className="col-1"
+        >
+          mission
+        </th>
+        <th>
+          Description
+        </th>
+        <th
+          className="col-2"
+        >
+          Status
+        </th>
+        <th
+          className="col-2"
+        >
+           
+        </th>
+      </tr>
+    </thead>
+    <tbody />
+  </table>
+</div>
+`;

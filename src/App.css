@@ -4,13 +4,18 @@
   padding: 0 !important;
 }
 
+.panel-bg {
+  padding: 24px;
+  border-bottom: 1px solid black;
+} 
+
 a {
   text-decoration: none;
-  color: black;
+  color: rgb(57, 189, 250);
 }
 
 .active {
-  color: red;
+  color: rgb(89, 0, 255);
 }
 
 .rockets-images {
@@ -21,4 +26,12 @@ a {
 .span-mission {
   border-radius: 3px;
   padding: 0.5%;
+}
+
+.profile-nav {
+  border-left: 1px solid grey;
+}
+
+.button-reserverd {
+  display: none;
 }
