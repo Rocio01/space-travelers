@@ -2,40 +2,44 @@ import axios from 'axios';
 
 const SET_ROCKETS = 'space-travelers/rockets/SET_ROCKETS';
 const SET_RESERVED = 'space-travelers/rockets/SET_RESERVED';
-const SET_CANCELLATION = 'space-travelers/rockets/SET_RESERVED';
+const SET_CANCELLATION = 'space-travelers/rockets/SET_CANCELLATION';
 const URL = 'https://api.spacexdata.com/v3/rockets';
 const initialState = {
   rockets: [],
 };
 
-export const setReserved = (payload) => ({
+export const setReserved = (id) => ({
   type: SET_RESERVED,
-  payload,
+  payload: id,
 });
 
-export const setCancellation = (payload) => ({
+export const setCancellation = (id) => ({
   type: SET_CANCELLATION,
-  payload,
+  payload: id,
 });
 
 const rocketsReducer = (state = initialState, action) => {
   switch (action.type) {
     case SET_ROCKETS:
       return { ...state, rockets: action.payload };
-    case SET_RESERVED: {
-      const newState = state.rockets.map((rocket) => {
-        if (rocket.id !== action.id) return rocket;
-        return { ...rocket, reserved: true };
-      });
-      return newState;
-    }
-    case SET_CANCELLATION: {
-      const newState = state.rockets.map((rocket) => {
-        if (rocket.id !== action.id) return rocket;
-        return { ...rocket, reserved: false };
-      });
-      return newState;
-    }
+    case SET_RESERVED:
+      return {
+        ...state,
+        rockets: state.rockets.map(
+          (rocket) => (
+            rocket.id === action.payload ? { ...rocket, reserved: true } : rocket
+          ),
+        ),
+      };
+    case SET_CANCELLATION:
+      return {
+        ...state,
+        rockets: state.rockets.map(
+          (rocket) => (
+            rocket.id === action.payload ? { ...rocket, reserved: false } : rocket
+          ),
+        ),
+      };
 
     default:
       return state;

@@ -13,6 +13,7 @@ const Rockets = (props) => {
 
   const newReservetion = () => {
     dispatch(setReserved(id));
+    console.log(reserved);
   };
 
   const cancelReservetion = () => {
@@ -30,7 +31,7 @@ const Rockets = (props) => {
           { reserved === true ? 'Reserved' : ''}
         </span>
         <p>{description}</p>
-        <button type="button" className={reserved === true ? 'btn-info ' : 'btn btn-primary'} onClick={reserved === true ? newReservetion : cancelReservetion}>{reserved === true ? 'Cancel Booking' : 'reserved rocket'}</button>
+        <button type="button" className={reserved === true ? 'btn-info ' : 'btn btn-primary'} onClick={reserved === true ? cancelReservetion : newReservetion}>{reserved === true ? 'Cancel Booking' : 'reserved rocket'}</button>
       </div>
 
     </div>
