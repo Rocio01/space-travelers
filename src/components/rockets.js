@@ -2,17 +2,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { setReserved } from '../redux/rockets/rockets';
+import { setReserved, setCancellation } from '../redux/rockets/rockets';
 
 const Rockets = (props) => {
   const {
-    id, rocket_name, description, flickr_images, reserved = false,
+    id, rocket_name, description, flickr_images, reserved,
   } = props;
 
   const dispatch = useDispatch();
 
   const newReservetion = () => {
     dispatch(setReserved(id));
+  };
+
+  const cancelReservetion = () => {
+    dispatch(setCancellation(id));
   };
 
   return (
@@ -22,9 +26,11 @@ const Rockets = (props) => {
       </div>
       <div className="col-9">
         <h5>{rocket_name}</h5>
-        <span>{reserved}</span>
+        <span className={reserved === true ? 'btn-info span-mission' : 'btn-secondary span-mission'}>
+          { reserved === true ? 'Reserved' : ''}
+        </span>
         <p>{description}</p>
-        <button type="button" onClick={newReservetion} className="btn btn-primary">Reserved Rocket</button>
+        <button type="button" className={reserved === true ? 'btn btn-outline-danger mission-button' : 'btn btn-outline-dark mission-button'} onClick={reserved === true ? newReservetion : cancelReservetion}>{reserved === true ? 'Cancel Booking' : 'reserved rocket'}</button>
       </div>
 
     </div>

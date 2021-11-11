@@ -6,11 +6,13 @@ import { fetchRockets } from '../redux/rockets/rockets';
 const DisplayRockets = () => {
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    fetchRockets(dispatch);
-  }, []);
+  const rocketsStore = useSelector((store) => store.rocketsReducer.rockets);
 
-  const rocketsStore = useSelector((store) => Object.values(store.rocketsReducer.rockets));
+  useEffect(() => {
+    if (!rocketsStore.length) {
+      fetchRockets(dispatch);
+    }
+  }, []);
 
   return (
     <div className="container">
