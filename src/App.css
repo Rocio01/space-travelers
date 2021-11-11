@@ -17,3 +17,8 @@ a {
   width: 246px;
   height: 171px;
 }
+
+.span-mission {
+  border-radius: 3px;
+  padding: 0.5%;
+}

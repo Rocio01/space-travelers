@@ -23,13 +23,13 @@ const Mission = (props) => {
     <tr key={mission_id}>
       <td>{mission_name}</td>
       <td>{description}</td>
-      <td>
-        <span>
+      <td className="align-middle text-center">
+        <span className={status === true ? 'btn-info span-mission' : 'btn-secondary span-mission'}>
           { status === true ? 'Active member' : 'NOT A MEMBER'}
         </span>
       </td>
-      <td>
-        <button type="button" onClick={status === true ? leave : join}>
+      <td className="align-middle text-center">
+        <button type="button" className={status === true ? 'btn btn-outline-danger mission-button' : 'btn btn-outline-dark mission-button'} onClick={status === true ? leave : join}>
           {status === true ? 'Leave Misssion' : 'Join Mission'}
         </button>
       </td>

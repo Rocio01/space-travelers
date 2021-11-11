@@ -16,7 +16,7 @@ const MissionsContainer = () => {
 
   return (
     <div className="container mt-5">
-      <table className="table table-bordered">
+      <table className="table table-bordered table-striped">
         <thead>
           <tr>
             <th className="col-1">mission</th>
