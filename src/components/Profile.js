@@ -1,7 +1,13 @@
 import React from 'react';
+import ProfileMisions from './ProfileMisions';
 
 function Profile() {
-  return <h1>Under construction</h1>;
+  return (
+    <div>
+      <ProfileMisions />
+      ;
+    </div>
+  );
 }
 
 export default Profile;
