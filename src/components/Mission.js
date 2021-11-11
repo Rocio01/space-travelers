@@ -6,7 +6,7 @@ import { joinMission, leaveMission } from '../redux/missions/missions';
 /* eslint-disable camelcase */
 const Mission = (props) => {
   const {
-    mission_id, mission_name, description, status = false,
+    mission_id, mission_name, description, status,
   } = props;
 
   const dispatch = useDispatch();

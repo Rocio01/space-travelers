@@ -6,11 +6,13 @@ import { fetchMissions } from '../redux/missions/missions';
 const MissionsContainer = () => {
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    fetchMissions(dispatch);
-  }, []);
-
   const missionsStore = useSelector((store) => store.missionsReducer.missions);
+
+  useEffect(() => {
+    if (!missionsStore.length) {
+      fetchMissions(dispatch);
+    }
+  }, []);
 
   return (
     <div className="container mt-5">
