@@ -5,9 +5,3 @@ exports[`matches DisplayRockets component snapshot 1`] = `
   className="container"
 />
 `;
-
-exports[`matches Rockets component snapshot 1`] = `
-<div
-  className="container"
-/>
-`;

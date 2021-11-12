@@ -16,12 +16,13 @@ exports[`matches Rockets component snapshot 1`] = `
     className="col-9"
   >
     <h5 />
-    <span
-      className="btn"
-    >
-      
-    </span>
-    <p />
+    <p>
+      <span
+        className="button-reserverd"
+      >
+        
+      </span>
+    </p>
     <button
       className="btn btn-primary"
       onClick={[Function]}

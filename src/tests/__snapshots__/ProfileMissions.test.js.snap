@@ -1,11 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`matches MissionsContainer component snapshot 1`] = `
-<ul
-  className="list-group"
-/>
-`;
-
 exports[`matches ProfileMisions component snapshot 1`] = `
 <ul
   className="list-group"
