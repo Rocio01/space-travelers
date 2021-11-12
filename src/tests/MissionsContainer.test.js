@@ -1,19 +1,15 @@
 import React from 'react';
-import { screen, render } from '@testing-library/react';
+//  import { screen, render } from '@testing-library/react';
 import renderer from 'react-test-renderer';
-import { Provider, useDispatch } from 'react-redux';
-import missionsReducer, { fetchMissions } from '../redux/missions/missions';
+import { Provider } from 'react-redux';
+import missionsReducer from '../redux/missions/missions';
 import '@testing-library/jest-dom/extend-expect';
 import MissionsContainer from '../components/MissionsContainer';
 import store from '../redux/configureStore';
 
-jest.mock('./mocks/api.js');
-
-
-// const dispatch = useDispatch();
 // describe('Missions tests', () => {
 //   it('Missions page matches snapshot', async () => {
-//     await fetchMissions(dispatch);
+//     await store.dispatch(fetchMissions());
 //     const missionsPage = renderer
 //       .create(<Provider store={store}><MissionsContainer /></Provider>)
 //       .toJSON();
