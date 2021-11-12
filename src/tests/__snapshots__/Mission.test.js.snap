@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches Mission component snapshot 1`] = `
+<tr>
+  <td />
+  <td />
+  <td
+    className="align-middle text-center"
+  >
+    <span
+      className="btn-secondary span-mission"
+    >
+      NOT A MEMBER
+    </span>
+  </td>
+  <td
+    className="align-middle text-center"
+  >
+    <button
+      className="btn btn-outline-dark mission-button"
+      onClick={[Function]}
+      type="button"
+    >
+      Join Mission
+    </button>
+  </td>
+</tr>
+`;
+
+exports[`missions component functionality matches Mission component snapshot 1`] = `
+<tr>
+  <td />
+  <td />
+  <td
+    className="align-middle text-center"
+  >
+    <span
+      className="btn-secondary span-mission"
+    >
+      NOT A MEMBER
+    </span>
+  </td>
+  <td
+    className="align-middle text-center"
+  >
+    <button
+      className="btn btn-outline-dark mission-button"
+      onClick={[Function]}
+      type="button"
+    >
+      Join Mission
+    </button>
+  </td>
+</tr>
+`;
