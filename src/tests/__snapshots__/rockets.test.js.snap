@@ -33,3 +33,37 @@ exports[`matches Rockets component snapshot 1`] = `
   </div>
 </div>
 `;
+
+exports[`rocket component functionality matches Rockets component snapshot 1`] = `
+<div
+  className="row m-4"
+>
+  <div
+    className="col-3"
+  >
+    <img
+      alt="flickr_images"
+      className="rockets-images"
+    />
+  </div>
+  <div
+    className="col-9"
+  >
+    <h5 />
+    <p>
+      <span
+        className="button-reserverd"
+      >
+        
+      </span>
+    </p>
+    <button
+      className="btn btn-primary"
+      onClick={[Function]}
+      type="button"
+    >
+      reserved rocket
+    </button>
+  </div>
+</div>
+`;

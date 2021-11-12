@@ -1,5 +1,4 @@
 import React from 'react';
-import { screen, render } from '@testing-library/react';
 import renderer from 'react-test-renderer';
 import { Provider } from 'react-redux';
 import missionsReducer from '../redux/missions/missions';
